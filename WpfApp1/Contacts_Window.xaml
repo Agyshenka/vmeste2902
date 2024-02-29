@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="Contacts_Window" Height="450" Width="800">
     <Grid>
-        
+        <DataGrid Margin="113,26,87,86" Width="600"/>
+        <TextBox Margin="126,370,524,34" Width="150" TextAlignment="Center" FontSize="15">Номер телефона</TextBox>
+        <Button Margin="316,370,364,34" Width="120" FontSize="15">Добавить</Button>
+        <TextBox Height="25" Margin="570,366,209,44" Width="20" FontSize="15">id</TextBox>
+        <Button Height="27" Margin="596,397,71,9" Width="130">Удалить</Button>
+        <Button Height="27" Margin="596,364,71,42" Width="130">Изменить</Button>
+        <TextBox Height="25" Margin="570,400,209,10" Width="20" FontSize="15" Text="id"/>
     </Grid>
 </Window>
