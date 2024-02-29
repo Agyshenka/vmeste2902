@@ -1,18 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfApp1
 {
@@ -47,7 +35,7 @@ namespace WpfApp1
                 }
                 else
                 {
-                    Error_Label.Content = "Логин/пароль неверны. ";
+                    Error_Label.Content = "Логин/пароль неверны!";
                 }
             }
         }
@@ -62,8 +50,13 @@ namespace WpfApp1
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@Login", Login);
                     command.Parameters.AddWithValue("@Password", Password);
-
                     int count = (int)command.ExecuteScalar();
+
+                    string query1 = "SELECT UserID FROM Users WHERE Username = @Login AND Password = @Password";
+                    SqlCommand command1 = new SqlCommand(query1, connection);
+                    command1.Parameters.AddWithValue("@Login", Login);
+                    command1.Parameters.AddWithValue("@Password", Password);
+                    Global.userID = (int)command1.ExecuteScalar();
 
                     return count == 1; // Если есть совпадение, возвращаем true
                 }

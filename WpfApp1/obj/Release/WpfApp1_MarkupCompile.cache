@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-E:\mdk_07_01\Новая папка\WpfApp1\obj\Debug\
+E:\mdk_07_01\Новая папка\WpfApp1\obj\Release\
 WpfApp1
 none
 false
-DEBUG;TRACE
+TRACE
 E:\mdk_07_01\Новая папка\WpfApp1\App.xaml
 217725921
 
-81418096600
+7-794782078
 13-1310406943
 Contacts_Window.xaml;MainWindow.xaml;
 

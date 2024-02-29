@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Contacts_Window" Height="450" Width="800">
     <Grid>
-        <DataGrid Margin="113,26,87,86" Width="600"/>
+        <DataGrid x:Name="DataGrid" Margin="113,26,87,86" Width="600"/>
         <TextBox Margin="126,370,524,34" Width="150" TextAlignment="Center" FontSize="15">Номер телефона</TextBox>
         <Button Margin="316,370,364,34" Width="120" FontSize="15">Добавить</Button>
         <TextBox Height="25" Margin="570,366,209,44" Width="20" FontSize="15">id</TextBox>
