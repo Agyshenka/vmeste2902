@@ -5,10 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Авторизация" Height="277" Width="274">
     <Grid>
-        <TextBox Width="160" Height="30" FontSize="15" TextAlignment="Center" HorizontalAlignment="Center">Логин</TextBox>
-        <TextBox Width="160" Height="30" FontSize="15" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,237,0,167">Пароль</TextBox>
-        <Button Height="NaN" Margin="350,272,350,134" Width="NaN" RenderTransformOrigin="0.483,1.266" FontSize="15">Войти</Button>
+        <Label Content="Вход" HorizontalAlignment="Left" Margin="105,31,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Comic Sans MS"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="46,93,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="46,118,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="Login_TextBox" HorizontalAlignment="Left" Margin="102,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20" />
+        <PasswordBox x:Name="Password_TextBox" HorizontalAlignment="Left" Margin="102,121,0,0" VerticalAlignment="Top" Width="120" Height="20"/>
+        <Button x:Name="Authorization_Button" Content="Войти" HorizontalAlignment="Left" Margin="46,163,0,0" VerticalAlignment="Top" Width="176" Height="35" Background="#FF498C51" FontFamily="Comic Sans MS" Click="Authorization_Button_Click"/>
+        <Label x:Name="Error_Label" Content="" HorizontalAlignment="Center" Margin="0,63,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="15" FontWeight="Bold"/>
+
     </Grid>
 </Window>
