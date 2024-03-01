@@ -29,6 +29,10 @@ namespace WpfApp1
                 {
                     MessageBox.Show("Успешная аутентификация");
 
+                    string query1 = "SELECT UserID FROM Users WHERE Username = '" + Login + "' AND Password = '"+ Password+ "'";
+                    SqlCommand command1 = new SqlCommand(query1, connection);
+                    Global.userID = (int)command1.ExecuteScalar();
+
                     Contacts_Window frm = new Contacts_Window();
                     frm.Show();
                     this.Close();
@@ -52,13 +56,7 @@ namespace WpfApp1
                     command.Parameters.AddWithValue("@Password", Password);
                     int count = (int)command.ExecuteScalar();
 
-                    string query1 = "SELECT UserID FROM Users WHERE Username = @Login AND Password = @Password";
-                    SqlCommand command1 = new SqlCommand(query1, connection);
-                    command1.Parameters.AddWithValue("@Login", Login);
-                    command1.Parameters.AddWithValue("@Password", Password);
-                    Global.userID = (int)command1.ExecuteScalar();
-
-                    return count == 1; // Если есть совпадение, возвращаем true
+                    return count == 1;
                 }
                 catch (Exception ex)
                 {
